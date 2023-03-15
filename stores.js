@@ -1,5 +1,4 @@
 const storeList = [
-      const storeList = [
       {
         "type": "Feature",
         "geometry": {
