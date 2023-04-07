@@ -154,22 +154,4 @@ L.control.coordinates({
 }).addTo(myMap);
 
 //FPA Boundry
-var shpfile = new L.Shapefile('FPA BOUNDARY.zip', {
-			onEachFeature: function(feature, layer) {
-				if (feature.properties) {
-					layer.bindPopup(Object.keys(feature.properties).map(function(k) {
-						return k + ": " + feature.properties[k];
-					}).join("<br />"), {
-						maxHeight: 200
-					});
-				}
-			}
-		});
-		shpfile.addTo(myMap);
-		shpfile.once("data:loaded", function() {
-			console.log("finished loaded shapefile");
-		});
-
-
-
-
+var FPABOUNDARY = L.geoJSON(FPABOUNDARY).addTo(myMap);
