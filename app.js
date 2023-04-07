@@ -154,7 +154,7 @@ L.control.coordinates({
 }).addTo(myMap);
 
 //FPA Boundry
-var shpfile = new L.Shapefile('FPA BOUNDARY.zip', {
+var shpfile = new L.Shapefile('FPA BOUNDARY.shp', {
 			onEachFeature: function(feature, layer) {
 				if (feature.properties) {
 					layer.bindPopup(Object.keys(feature.properties).map(function(k) {
