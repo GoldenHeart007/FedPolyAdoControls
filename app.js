@@ -153,36 +153,10 @@ L.control.coordinates({
 	customLabelFcn: function(latLonObj, opts) { "Geohash: " + encodeGeoHash(latLonObj.lat, latLonObj.lng)} //optional default none
 }).addTo(myMap);
 
+
 //FPA Boundry
-var shpfile = new L.Shapefile('EKLG.zip', {
-			onEachFeature: function(feature, layer) {
-				if (feature.properties) {
-					layer.bindPopup(Object.keys(feature.properties).map(function(k) {
-						return k + ": " + feature.properties[k];
-					}).join("<br />"), {
-						maxHeight: 200
-					});
-				}
-			}
-		});
-		shpfile.addTo(myMap);
-		shpfile.once("data:loaded", function() {
-			console.log("finished loaded shapefile");
-		});
-//EKITI LG
-var shpfile = new L.Shapefile('FEDPOLY.zip', {
-			onEachFeature: function(feature, layer) {
-				if (feature.properties) {
-					layer.bindPopup(Object.keys(feature.properties).map(function(k) {
-						return k + ": " + feature.properties[k];
-					}).join("<br />"), {
-						maxHeight: 200
-					});
-				}
-			}
-		});
-		shpfile.addTo(myMap);
-		shpfile.once("data:loaded", function() {
-			console.log("finished loaded shapefile");
-		});
+$scope.addShape = function () {
+    var shpfile = new L.Shapefile('EKLG.zip');
+    shpfile.addTo(myMap);
+}
 
