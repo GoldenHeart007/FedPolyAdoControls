@@ -1,3 +1,22 @@
+//FPA Boundry
+var shpfile = new L.Shapefile('FEDPOLY.zip', {
+			onEachFeature: function(feature, layer) {
+				if (feature.properties) {
+					layer.bindPopup(Object.keys(feature.properties).map(function(k) {
+						return k + ": " + feature.properties[k];
+					}).join("<br />"), {
+						maxHeight: 200
+					});
+				}
+			}
+		});
+		shpfile.addTo(myMap);
+		shpfile.once("data:loaded", function() {
+			console.log("finished loaded shapefile");
+		});
+
+
+
 const myMap = L.map('map').setView([7.59338544, 5.296483476], 16);  
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const attribution =
@@ -169,4 +188,5 @@ var shpfile = new L.Shapefile('EKLG.zip', {
 		shpfile.once("data:loaded", function() {
 			console.log("finished loaded shapefile");
 		});
+
 
