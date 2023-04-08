@@ -153,6 +153,11 @@ L.control.coordinates({
 	customLabelFcn: function(latLonObj, opts) { "Geohash: " + encodeGeoHash(latLonObj.lat, latLonObj.lng)} //optional default none
 }).addTo(myMap);
 
+//Shape file Boundary
+var EkitiData = L.geoJSON(EKLG).addTo(myMap);
+
+var FpaData = L.geoJSON(FEDPOLY).addTo(myMap);
+
 
 
 
