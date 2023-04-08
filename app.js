@@ -155,8 +155,7 @@ L.control.coordinates({
 
 
 //FPA Boundry
-$scope.addShape = function () {
-    var shpfile = new L.Shapefile('EKLG.zip');
-    shpfile.addTo(myMap);
-}
+var EKLG = L.geoJSON(EKLG).addTo(myMap);
+
+var FEDPOLY = L.geoJSON(FEDPOLY).addTo(myMap);
 
