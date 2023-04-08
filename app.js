@@ -154,8 +154,5 @@ L.control.coordinates({
 }).addTo(myMap);
 
 
-//FPA Boundry
-var EKLG = L.geoJSON(EKLG).addTo(myMap);
 
-var FEDPOLY = L.geoJSON(FEDPOLY).addTo(myMap);
 
