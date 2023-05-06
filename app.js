@@ -158,6 +158,11 @@ var EkitiData = L.geoJSON(EKLG).addTo(myMap);
 
 var FpaData = L.geoJSON(FEDPOLY).addTo(myMap);
 
+var LAGOS_LG = L.geoJSON(lagos_lg).addTo(myMap);
+
+var NIG_INTL_BOUNDARY = L.geoJSON(nig_intl_boundary).addTo(myMap);
+
+
 
 
 
