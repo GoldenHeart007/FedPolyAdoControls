@@ -47,9 +47,8 @@ function onEachFeature(feature, layer) {
 const shopsLayer = L.geoJSON(storeList, {
     onEachFeature: onEachFeature,
     pointToLayer: function(feature, latlng) {
-        return L.shapeMarker([latlng]), {
-		
-
+        return L.marker(latlng);
+}		
 });shopsLayer.addTo(myMap);
 
 function flyToStore(store) {
