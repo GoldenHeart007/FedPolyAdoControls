@@ -55,7 +55,8 @@ const shopsLayer = L.geoJSON(storeList, {
 		color: "blue",
 		radius: "10"
 
-	}
+}
+})
 });shopsLayer.addTo(myMap);
 
 function flyToStore(store) {
