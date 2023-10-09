@@ -47,7 +47,7 @@ function onEachFeature(feature, layer) {
 const shopsLayer = L.geoJSON(storeList, {
     onEachFeature: onEachFeature,
     pointToLayer: function(feature, latlng) {
-        return L.shapeMarker(latlng, {
+        return L.shapeMarker([latlng]), {
 		shape: "triangle",
 		rotation: "180",
 		fillColor: "blue",
@@ -56,7 +56,7 @@ const shopsLayer = L.geoJSON(storeList, {
 		radius: "10"
 
 }
-})
+
 });shopsLayer.addTo(myMap);
 
 function flyToStore(store) {
