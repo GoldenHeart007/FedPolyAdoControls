@@ -1151,11 +1151,23 @@ const storeList = [
           "phone": "+2348105596815"
          }
        },
+{
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5.296736353, 7.591866408]
+        },
+        "properties": {
+          "name": "95. BLACKBERRY",
+          "address": "753498.225mE, 839732.381mN, 373.111m",
+          "phone": "+2348105596815"          
+        }
+      },
        {
         "type": "Feature",
         "geometry": {
           "type": "Point",
-          "coordinates": [5.296390584, 7.593416669]
+          "coordinates": [3.6513266165342997, 6.447134891212534]
         },
         "properties": {
           "name": "97. CONTROL 9531 (OBS)",
